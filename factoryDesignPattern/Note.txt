@@ -26,6 +26,7 @@ is Main "tightly coupled with I"
 
  
 ---------------------------------------------------------------------------------------------
+    
     in this iteration of the code:
     is Main "tightly coupled?"
     Main -----------> I     Yes.
@@ -37,4 +38,4 @@ is Main "tightly coupled with I"
     we removed it by instead making it tightly coupled with IFactory.
 
     Main---------> IFactory ---------> A  
-    
+
