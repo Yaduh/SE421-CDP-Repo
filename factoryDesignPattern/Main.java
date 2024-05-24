@@ -5,7 +5,7 @@ import factoryDesignPattern.customInterfaceImplementation.IFactory;
 
 public class Main{
     public static void main(String...args){
-        I obj = IFactory.newInstance(true); 
+        I obj = IFactory.newInstance(1); 
         test(obj);
 
     }
