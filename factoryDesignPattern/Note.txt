@@ -1,0 +1,19 @@
+is Main "tightly coupled with I"
+    Main ---------> I   Yes.
+        ----------> A   Yes.
+
+        why is it tightly coupled with A? 
+        If we were to delete the class 'A'. We would have to go back to the Main class
+        and change (line 4): I obj = new A();
+        to a different class (for ex: B)
+        I obj = new B();
+
+        The reason that it happens is the way that the "new" keyword works.
+
+        How can we fix that?
+        Factory method: 
+         
+        ---------------------------------------------------------------------------------------------
+        
+        ... End of iteration
+

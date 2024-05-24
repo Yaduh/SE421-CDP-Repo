@@ -1,0 +1,23 @@
+Creational Design Patterns
+
+https://refactoring.guru/
+
+- Factory Design Pattern
+
+- Dependency Injection
+
+
+
+-------------
+Polymorphism:
+
+Class <--- Hot spot
+
+Class A -------> Class B -----> I    A knows a lot of classes
+        ------> C       
+        ------D       
+        ------>N        
+        classes B to M are all implementations of an Interface
+        A knows every single implementation of I where I is either a super class or an Interface
+
+    We want to reduce having these hot spots as much as possible.
