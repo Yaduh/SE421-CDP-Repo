@@ -11,9 +11,30 @@ is Main "tightly coupled with I"
         The reason that it happens is the way that the "new" keyword works.
 
         How can we fix that?
-        Factory method: 
-         
-        ---------------------------------------------------------------------------------------------
-        
-        ... End of iteration
 
+        Factory method: 
+        
+        Introduce a class with the Post-fix Factory with the Interface name associated with it.
+        ex: ItemFactory
+            OperationFactory
+            "Interface"Factory
+        
+        Or as a convention it may be called:
+            1- <I>Provider
+            2- <I>ServiceProvider
+            3- <I>Services
+
+ 
+---------------------------------------------------------------------------------------------
+    in this iteration of the code:
+    is Main "tightly coupled?"
+    Main -----------> I     Yes.
+    Main -----------> IFactory      Yes.
+    Main -----------> A             No.
+
+    How did we remove that tightly coupledness with A?
+
+    we removed it by instead making it tightly coupled with IFactory.
+
+    Main---------> IFactory ---------> A  
+    
