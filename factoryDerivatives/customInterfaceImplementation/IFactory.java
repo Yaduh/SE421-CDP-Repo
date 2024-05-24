@@ -5,17 +5,13 @@ package factoryDerivatives.customInterfaceImplementation;
     private IFactory(){ // removes the public constructor of IFactory
                         // effectively forcing the usage of the static method newInstance().
     }
-    private static int counter = 1;
+    private static I obj;
     public static I newInstance(){
-        counter++;
-        if(counter == 1){ 
-            return new A();
-        }else {
-            counter = 0;
-            return new B();
+
+        if(obj == null){
+            obj = new A();
         }
-             
-        //(alternatively you could also use switch case)
+        return obj;
     }
     
 }
