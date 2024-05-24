@@ -12,12 +12,16 @@ package factoryDerivatives.customInterfaceImplementation;
 
     // solution 1             
     private static I obj;
-    public static I getInstance(){ //changed name from newInstance to getInstance. 
-                                    // because we access the same object everytime.
-        if(obj == null){
-            obj = new A();
+
+    public static void setInstance(I i){
+        obj = i;
+    }
+    // lazy loading
+    public static I getInstance(){ 
+        if(obj != null){
+            return obj;
         }
-        return obj;
+        return new A();
     }
     
 }

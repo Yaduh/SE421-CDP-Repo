@@ -5,6 +5,13 @@ import factoryDerivatives.customInterfaceImplementation.IFactory;
 
 public class Main{
     public static void main(String...args){
+
+        IFactory.setInstance(new I(){
+            public void print(){
+                System.out.println("Custom");
+            }
+        });
+
         I obj = IFactory.getInstance(); 
         I obj1 = IFactory.getInstance();
 
