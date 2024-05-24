@@ -1,13 +1,19 @@
 package factoryDerivatives.customInterfaceImplementation;
 
-// Creates an implementation of the interface 'I'
-    public class IFactory { // By encapsulating the keyword 'new'
-    private IFactory(){ // removes the public constructor of IFactory
-                        // effectively forcing the usage of the static method newInstance().
-    }
-    private static I obj;
-    public static I newInstance(){
+// Signleton Design Pattern.
+    public class IFactory { 
+    private IFactory(){}
+    // solution 2
+        private static I obj2 = new A();
+        public static I getInstance2(){
+            return obj2;
+        }
+    
 
+    // solution 1             
+    private static I obj;
+    public static I getInstance(){ //changed name from newInstance to getInstance. 
+                                    // because we access the same object everytime.
         if(obj == null){
             obj = new A();
         }

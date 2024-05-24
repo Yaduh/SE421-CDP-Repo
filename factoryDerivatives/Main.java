@@ -5,10 +5,18 @@ import factoryDerivatives.customInterfaceImplementation.IFactory;
 
 public class Main{
     public static void main(String...args){
-        I obj = IFactory.newInstance(); 
-        I obj2 = IFactory.newInstance();
+        I obj = IFactory.getInstance(); 
+        I obj1 = IFactory.getInstance();
+
+        I obj2 = IFactory.getInstance2();
+        I obj3 = IFactory.getInstance2();
         test(obj);
+        test(obj1);
+        System.out.println( 
+        "-----------------------------------------------------------------"
+        );
         test(obj2);
+        test(obj3);
 
     }
  
