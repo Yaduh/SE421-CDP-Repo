@@ -5,11 +5,11 @@ import factoryDesignPattern.customInterfaceImplementation.IFactory;
 
 public class Main{
     public static void main(String...args){
-        I obj = IFactory.newInstanceA(); 
+        I obj = IFactory.newInstance(true); 
         test(obj);
 
     }
-
+ 
     public static void test(I arg){
         arg.print();
     }

@@ -5,17 +5,11 @@ package factoryDesignPattern.customInterfaceImplementation;
     private IFactory(){ // removes the public constructor of IFactory
                         // effectively forcing the usage of the static method newInstance().
     }
-    public static I newInstanceA(){
-        I obj = new A(){
-            @Override
-            public void print(){
-                System.out.println("Print A from IFactory");
-            }
-        };
-        return obj;
+    public static I newInstance(boolean isA){
+        if(isA){ // if two objects
+            return new A();
+        }
+        return new B();
     }
-    public static I newInstanceB(){
-        I obj = new B();
-        return obj;
-    }
+    
 }
