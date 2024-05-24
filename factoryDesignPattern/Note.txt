@@ -39,3 +39,8 @@ is Main "tightly coupled with I"
 
     Main---------> IFactory ---------> A  
 
+ 
+---------------------------------------------------------------------------------------------
+How to recognize Factory design pattern?
+If you see a new instance of an object being created without
+the keyword 'new', that would show that it is a Factory Design Pattern
