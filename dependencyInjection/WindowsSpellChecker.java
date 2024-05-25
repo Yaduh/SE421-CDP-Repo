@@ -1,6 +1,6 @@
 package dependencyInjection;
 
-public class WindowsSpellChecker {
+public class WindowsSpellChecker implements SpellChecker{
     public String[] check(String content){
         // 30 API only run under windows
     }
