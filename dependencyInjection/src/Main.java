@@ -5,6 +5,7 @@ public class Main {
     public static void main(String...args){
      Injector g = Guice.createInjector(new TextEditorModule());
      TextEditor t1 = g.getInstance(TextEditor.class);
+     t1.render();
     }
     
 }
