@@ -1,4 +1,3 @@
-package dependencyInjection;
 
 public class LinuxSpellChecker implements SpellChecker{
     public String[] check(String content){

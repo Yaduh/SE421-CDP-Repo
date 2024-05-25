@@ -1,4 +1,4 @@
-package dependencyInjection;
+
 
 public class MacOsSpellChcker implements SpellChecker{
     public String[] check(String content){
