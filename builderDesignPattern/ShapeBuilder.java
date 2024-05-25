@@ -5,7 +5,12 @@ public class ShapeBuilder {
     private int y;
     private int z;
 
-    ShapeBuilder(){
+    public ShapeBuilder(Shape s){
+        this.x = s.getX();
+        this.y = s.getY();
+        this.z = s.getZ();
+    }
+    public ShapeBuilder(){
         this.x = this.y = this.z =-1;
     }
     

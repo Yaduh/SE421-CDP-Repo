@@ -11,7 +11,17 @@ public class Main {
     .build(); 
     
     print(s);
-    }
+    
+    ShapeBuilder b2 = new ShapeBuilder(s);
+    b2.setX(1)
+    .setZ(10);
+
+    s = b2.build();
+
+    print(s);
+
+}
+    
     
 
     static void print(Shape s){
