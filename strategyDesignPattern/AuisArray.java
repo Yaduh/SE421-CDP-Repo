@@ -3,10 +3,13 @@ package strategyDesignPattern;
 public class AuisArray {
     private int[] arr = new int[100];
     private int size = 0; 
-    
-    // new method
-    public void sort(ArraySortStrategy arg){
-        arg.sort(this);
+    private ArraySortStrategy strategy;
+    // constructor variant:
+    public AuisArray(ArraySortStrategy arg){
+        this.strategy = arg;
+    }
+    public void sort(){
+        this.strategy.sort(this);
     }
   
  //---------------------------------------------------------------------------------------------
