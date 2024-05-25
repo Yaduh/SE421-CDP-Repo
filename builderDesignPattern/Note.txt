@@ -1,0 +1,4 @@
+If use builder, avoid using DI and Factory
+
+Builder: creating complex objects step by step
+construction of the objet through editing an existing object
