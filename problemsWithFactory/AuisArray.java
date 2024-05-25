@@ -1,9 +1,5 @@
 package problemsWithFactory;
 
-// System Analyst: merge sort so that we can sort 
-// any object of AuisArray 
-
-
 // this implementation of array class is not included and is
 // purely for your understanding
 public class AuisArray {

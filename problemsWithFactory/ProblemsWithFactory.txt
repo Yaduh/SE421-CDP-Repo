@@ -16,7 +16,7 @@ so whats the key problem with factory classes?
 
 Cases where factory doesnt make sense:
 
-1.  representing every keyword 'new' with a factory class
+    -  representing every keyword 'new' with a factory class
     regardless of the type of class.
 
         - Classes represent data types
@@ -40,3 +40,20 @@ Cases where factory doesnt make sense:
                         input handler, output handler, ...
 
 
+ 
+---------------------------------------------------------------------------------------------
+
+        In this iteration of the code, ArraySortServiceFactory becomes a hotspot.
+
+            A1               
+            A2  --------I   <------- C1  
+            A3                       C2
+            problem: with every new implementation of a sort 
+            algorithm, we need to add a new a line and modify 
+            the factory class
+
+            If caller has the ability to choose an implementation...
+            Factory isn't ideal.
+
+            If caller doesnt have the ability to choose that implementation...
+            Factory is Acceptable.
