@@ -1,0 +1,42 @@
+The basic promise of factory classes is to isolate
+a set of components to ensure loosely coupledness
+between the callers from the implementation.
+
+A1               Factory
+A2  --------I   <------- C1(caller/user)  
+A3                       C2   
+
+so whats the key problem with factory classes?
+
+1.  For each interface you need to add a factory classes
+    which is typically shallow.
+2.  if you make a project where you have a factory equivalent
+    for every single 'new' keyword..
+    Your project is going to be way over engineered.
+
+Cases where factory doesnt make sense:
+
+1.  representing every keyword 'new' with a factory class
+    regardless of the type of class.
+
+        - Classes represent data types
+        
+        Doesn't make sense for:
+        ----------> dataType/Domain Objects
+                    ex: Student, Course, ...
+
+                    why?
+                    because every data type would have its own
+                    1- class
+                    2- interface (shallow)
+                    3- with a factory (shallow)
+                    Even with that loosely coupledness you arent making your code any better
+                    you're over engineering it.
+
+        Acceptable for:
+        ----------> Services
+                    perform computation to the caller
+                    ex: Talking to a database, storing data in a file
+                        input handler, output handler, ...
+
+
